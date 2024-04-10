@@ -36,7 +36,10 @@ resource "aws_instance" "gitlab_runner" {
   instance_type = var.instance_type
   subnet_id     = var.public_subnet_id
   key_name      = var.key_name
-  vpc_security_group_ids = [ aws_security_group.allow_inbound_ssh, aws_security_group.allow_outbound_traffic ]
+  iam_instance_profile = var.instance_profile_name
+  vpc_security_group_ids = [ aws_security_group.allow_inbound_ssh.id, aws_security_group.allow_outbound_traffic.id ]
+  user_data = file("${path.module}/init.sh")
+
   tags = {
     "Name" = "${local.project_tag}"
   }

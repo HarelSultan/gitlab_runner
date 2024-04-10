@@ -1,11 +1,11 @@
 variable "inbound_ssh_cidr" {
   description = "CIDR block from which is allowed to connect via ssh"
-  type = string
+  type        = string
 }
 
 variable "outbound_traffic_cidr" {
   description = "CIDR block outbound traffic allowed to"
-  type = string
+  type        = string
 }
 
 variable "outbound_traffic_protocol" {
@@ -31,10 +31,15 @@ variable "instnace_ami" {
 variable "instance_type" {
   description = "Type of instance to provision"
   type        = string
-  default = "t2.micro"
+  default     = "t2.micro"
 }
 
 variable "key_name" {
   description = "Name of the key used to connect to the instance"
+  type        = string
+}
+
+variable "instance_profile_name" {
+  description = "Instance profile name attached with the IAM Role"
   type        = string
 }

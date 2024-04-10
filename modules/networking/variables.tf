@@ -1,7 +1,7 @@
 variable "vpc_cidr_block" {
   description = "CIDR Block for VPC."
   type        = string
-  default     = "10.0.0.0/16"
+  default     = "10.0.0.0/20"
 }
 
 variable "public_subnet_cidr" {
