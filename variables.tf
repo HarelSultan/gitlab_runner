@@ -30,13 +30,13 @@ variable "runner_role_name" {
   type        = string
 }
 
-variable "s3_access_policy_arn" {
-  description = "ARN of the S3 Access policy. Used to access the remote state"
+variable "s3_bucket_name" {
+  description = "S3 bucket name used to store terraform remote state"
   type        = string
 }
 
-variable "dynamo_access_policy_arn" {
-  description = "ARN of the DynamoDB Access policy. Used to access state locking"
+variable "dynamodb_table_name" {
+  description = "DynamoDB Table name used for state locking"
   type        = string
 }
 

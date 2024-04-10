@@ -3,10 +3,10 @@ module "networking" {
 }
 
 module "iam" {
-  source             = "./modules/iam"
-  instance_role_name = var.runner_role_name
-  s3_access_policy_arn = var.s3_access_policy_arn
-  dynamo_access_policy_arn = var.dynamo_access_policy_arn
+  source              = "./modules/iam"
+  instance_role_name  = var.runner_role_name
+  s3_bucket_name      = var.s3_bucket_name
+  dynamodb_table_name = var.dynamodb_table_name
 }
 
 module "compute" {

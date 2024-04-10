@@ -5,5 +5,5 @@ outbound_traffic_protocol = -1
 instnace_ami              = "ami-0f403e3180720dd7e"
 instance_type             = "t2.micro"
 key_name                  = "your_ssh_key"
-s3_access_policy_arn      = "your_custom_s3_policy_arn"
-dynamo_access_policy_arn  = "your_custom_dynamodb_policy_arn"
+s3_bucket_name            = "your_s3_bucket_name"
+dynamodb_table_name       = "your_dynamodb_table_name"
