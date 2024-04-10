@@ -1,5 +1,5 @@
 locals {
-  iam_policies_arn = [var.s3_access_policy_arn, var.dynamo_access_policy_arn, var.ec2_access_policy_arn, var.vpc_access_policy_arn]
+  iam_policies_arn = [var.s3_access_policy_arn, var.dynamo_access_policy_arn, var.ec2_access_policy_arn, var.vpc_access_policy_arn, var.iam_access_policy_arn]
 }
 
 resource "aws_iam_role" "instance_role" {

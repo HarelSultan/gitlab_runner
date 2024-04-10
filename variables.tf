@@ -30,6 +30,16 @@ variable "runner_role_name" {
   type        = string
 }
 
+variable "s3_access_policy_arn" {
+  description = "ARN of the S3 Access policy. Used to access the remote state"
+  type        = string
+}
+
+variable "dynamo_access_policy_arn" {
+  description = "ARN of the DynamoDB Access policy. Used to access state locking"
+  type        = string
+}
+
 # Compute
 variable "inbound_ssh_cidr" {
   description = "CIDR block from which is allowed to connect via ssh"

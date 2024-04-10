@@ -29,3 +29,9 @@ variable "vpc_access_policy_arn" {
   type        = string
   default     = "arn:aws:iam::aws:policy/AmazonVPCFullAccess"
 }
+
+variable "iam_access_policy_arn" {
+  description = "ARN of the IAM Access policy. Used to provision IAM entities and attach policies"
+  type = string
+  default = "arn:aws:iam::aws:policy/IAMFullAccess"
+}
